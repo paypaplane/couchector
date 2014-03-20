@@ -1,6 +1,6 @@
 {
   "name": "couchector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creates a connection to a couch database",
   "main": "index.js",
   "directories": {
