@@ -11,9 +11,10 @@ Couchector.prototype.createConnector = function(settings, callback){
             }
             ready = true;
             callback(null, connection);
-            callbacks.forEach(function(callback){
-                callback(null, connection);
-            });
+
+            while(callbacks.length){
+                callbacks.pop()(null, connection);
+            }
         });
 
     var connector = function(callback){
